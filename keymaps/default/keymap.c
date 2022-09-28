@@ -120,6 +120,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 // bool oled_task_user(void) {
 //     render_logo();
 // oled_scroll_right();
+// }
 
 
 // OLED STUFF STARTS HERE
