@@ -11,8 +11,8 @@
 #define PRODUCT         bsjcat
 #define DESCRIPTION     bsjkbd
 
-#define MASTER_RIGHT // Comment this line for the left half firmware
-// #define MASTER_LEFT // Comment this line for the right half firmware
+// #define MASTER_RIGHT // Comment this line for the left half firmware
+#define MASTER_LEFT // Comment this line for the right half firmware
 
 /* key matrix size */
 #define MATRIX_ROWS 12
