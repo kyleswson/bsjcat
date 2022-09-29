@@ -11,8 +11,7 @@
 #define PRODUCT         bsjcat
 #define DESCRIPTION     bsjkbd
 
-// #define MASTER_RIGHT // Comment this line for the left half firmware
-#define MASTER_LEFT // Comment this line for the right half firmware
+#define MASTER_LEFT
 
 /* key matrix size */
 #define MATRIX_ROWS 12
@@ -56,7 +55,7 @@
 
 #define SPLIT_WPM_ENABLE
 #define SPLIT_OLED_ENABLE
-
+#define SPLIT_USB_DETECT
 #define OLED_TIMEOUT 300000
 
 #endif
