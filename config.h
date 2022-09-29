@@ -34,7 +34,7 @@
 #define ENCODERS_PAD_B { D5 }
 #define ENCODERS_PAD_A_RIGHT { D2 }
 #define ENCODERS_PAD_B_RIGHT { D5 }
-#define ENCODER_RESOLUTION { 2, 4 }
+#define ENCODER_RESOLUTIONS { 2, 4 }
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
