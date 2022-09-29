@@ -118,7 +118,10 @@ static void render_logo(void) {
 }
 // OLED
 bool oled_task_user(void) {
+    if (is_keyboard_master()) {
+    } else {
     render_logo();
     return false;
+    }
 }
 #endif
