@@ -121,7 +121,7 @@ bool oled_task_user(void) {
     if (is_keyboard_master()) {
     } else {
     render_logo();
-    return false;
     }
+    return false;
 }
 #endif
