@@ -30,11 +30,11 @@
 #define DIODE_DIRECTION COL2ROW
 
 /* Encoders */
-#define ENCODERS_PAD_A { D1 }
-#define ENCODERS_PAD_B { D0 }
+#define ENCODERS_PAD_A { D2 }
+#define ENCODERS_PAD_B { D5 }
 #define ENCODERS_PAD_A_RIGHT { D2 }
 #define ENCODERS_PAD_B_RIGHT { D5 }
-#define ENCODER_RESOLUTION 4
+#define ENCODER_RESOLUTION 2
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
