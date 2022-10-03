@@ -5,6 +5,8 @@
 
 #define BONGOCAT
 
+extern matrix_row_t matrix[MATRIX_ROWS];
+
 enum layer_names {
     _0,
     _1,
