@@ -12,6 +12,7 @@
 #define DESCRIPTION     bsjkbd
 
 #define MASTER_LEFT
+#define SPLIT_USB_DETECT
 
 /* key matrix size */
 #define MATRIX_ROWS 12
@@ -22,7 +23,6 @@
 #define MATRIX_COL_PINS { B2, B6, B5, B4, E6, D7, C6, D4 }
 #define MATRIX_ROW_PINS_RIGHT { B3, B1, F7, F6, F5, F4 }
 #define MATRIX_COL_PINS_RIGHT { B2, B6, B5, B4, E6, D7, C6, D4 }
-#define UNUSED_PINS
 // #define USE_I2C
 #define SOFT_SERIAL_PIN D3
 
@@ -34,7 +34,8 @@
 #define ENCODERS_PAD_B { D5 }
 #define ENCODERS_PAD_A_RIGHT { D2 }
 #define ENCODERS_PAD_B_RIGHT { D5 }
-#define ENCODER_RESOLUTIONS { 2, 4 }
+#define ENCODER_RESOLUTIONS { 2 }
+#define ENCODER_RESOLUTIONS_RIGHT { 4 }
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
@@ -50,12 +51,7 @@
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
 
-/* prevent stuck modifiers */
-#define PREVENT_STUCK_MODIFIERS
-
-#define SPLIT_WPM_ENABLE
 #define SPLIT_OLED_ENABLE
-#define SPLIT_USB_DETECT
 #define OLED_TIMEOUT 300000
 
 #endif
