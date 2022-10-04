@@ -16,6 +16,7 @@ BACKLIGHT_ENABLE = no  # Enable keyboard backlight functionality
 AUDIO_ENABLE = no
 SPLIT_KEYBOARD = yes
 OLED_ENABLE = yes
+SRC += oled/oled-bongocat.c oled/oled-icons.c
 ENCODER_ENABLE = yes
 WPM_ENABLE = no
 RGBLIGHT_ENABLE = no
