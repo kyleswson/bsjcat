@@ -54,4 +54,14 @@
 #define SPLIT_OLED_ENABLE
 #define OLED_TIMEOUT 300000
 
+#define SPLIT_MODS_ENABLE
+#define SPLIT_LED_STATE_ENABLE
+#define SPLIT_LAYER_STATE_ENABLE
+
+#define OLED_FONT_H "oled/oledfont.c"
+
+#define CMK _0
+#define NUM _1
+#define SYM _2
+
 #endif
