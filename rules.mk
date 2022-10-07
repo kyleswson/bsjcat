@@ -5,7 +5,7 @@ BOOTLOADER = caterina
 # Build Options
 #   comment out to disable the options.
 #
-BOOTMAGIC_ENABLE = no # Virtual DIP switch configuration(+1000)
+BOOTMAGIC_ENABLE = lite # Virtual DIP switch configuration(+1000)
 MOUSEKEY_ENABLE = yes	# Mouse keys(+4700)
 EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
 CONSOLE_ENABLE = no	# Console for debug(+400)
@@ -20,3 +20,7 @@ SRC += oled/oled-bongocat.c oled/oled-icons.c
 ENCODER_ENABLE = yes
 WPM_ENABLE = no
 RGBLIGHT_ENABLE = no
+LTO_ENABLE = yes
+SPACE_CADET_ENABLE = no
+GRAVE_ESC_ENABLE = no 
+MAGIC_ENABLE = no
