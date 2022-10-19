@@ -1,18 +1,16 @@
 #include "bsjcat.h"
-#include <stdio.h>
-#include "matrix.h"
-#include OLED_FONT_H
-
-#define BONGOCAT
+// #include <stdio.h>
+// #include OLED_FONT_H
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         extern uint32_t oled_tap_timer;
         oled_tap_timer = timer_read32();
     }
+return true;
 }
 
-extern matrix_row_t matrix[MATRIX_ROWS];
+// extern matrix_row_t matrix[MATRIX_ROWS];
 
 enum layer_names {
     _0,
@@ -54,9 +52,9 @@ void matrix_init_user(void) {
 void matrix_scan_user(void) {
 }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	return true;
-}
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+// 	return true;
+// }
 
 void led_set_user(uint8_t usb_led) {
 
