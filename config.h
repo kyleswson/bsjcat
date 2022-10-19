@@ -4,14 +4,14 @@
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6060
+#define VENDOR_ID       0x1028
+#define PRODUCT_ID      0x1028
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    kyle son
-#define PRODUCT         bsjcat
+#define PRODUCT         bsj-6meow
 #define DESCRIPTION     bsjkbd
 
-#define MASTER_LEFT
+#define MASTER_RIGHT
 #define SPLIT_USB_DETECT
 
 /* key matrix size */
@@ -41,10 +41,10 @@
 #define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
+#undef LOCKING_SUPPORT_ENABLE
 
 /* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
+#undef LOCKING_RESYNC_ENABLE
 
 /* key combination for command */
 #define IS_COMMAND() ( \
@@ -60,8 +60,9 @@
 
 #define OLED_FONT_H "oled/oledfont.c"
 
-#define CMK _0
-#define NUM _1
-#define SYM _2
+#define CMK 1
+#define NUM 2
+#define SYM 3
+#define FNC 4
 
 #endif
