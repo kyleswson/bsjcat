@@ -1,4 +1,5 @@
-#include "bsjcat.h"
+#include "bongocattap.h"
+#include <stdbool.h>
 #include <stdio.h>
 #include "matrix.h"
 #include OLED_FONT_H
@@ -6,6 +7,9 @@
 #define BONGOCAT
 
 extern matrix_row_t matrix[MATRIX_ROWS];
+static bool startup_complete = false;
+static bool starting_up = false;
+uint16_t startup_timer = 0;
 
 enum layer_names {
     _0,
@@ -42,9 +46,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 void matrix_init_user(void) {
+    startup_timer = timer_read();
+    starting_up = true;
 }
 
 void matrix_scan_user(void) {
+    //wait 200ms after startup for OLED to become responsive
+    if (starting_up) {
+        if (timer_elapsed(startup_timer) >= 200) {
+            startup_complete = true;
+            starting_up = false;
+            oled_clear();
+            last_bongo_frame = 12; //force a redraw
+            draw_bongo_table();
+        }
+    }
+    if (startup_complete) {
+        draw_bongocat();
+    }
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
